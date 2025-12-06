@@ -38,7 +38,7 @@ function login() {
     msg.textContent = "Login successful! Redirecting...";
 
     setTimeout(() => {
-      window.location.href = "OGL/OGL.html"; // replace with your page
+      window.location.href = "OGL.html"; // replace with your page
     }, 1200);
   } else {
     msg.style.color = "red";
