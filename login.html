@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - CSS Team OGL Tools</title>
+  <link rel="stylesheet" href="login_style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="app-header">
+    <div class="header-container">
+      <img src="Oracle-Logo.png" alt="AG Logo" class="header-logo" />
+      <h1 class="header-title">CSS Team OGL Tools Login</h1>
+      <button onclick="requestAccess()">Request Access</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-wrapper">
+
+    <div class="container">
+
+      <div class="branding-box">
+        <h1><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#47034e"><path d="M160-440v80h640v-80H160Zm0-440h640q33 0 56.5 23.5T880-800v440q0 33-23.5 56.5T800-280H640v200l-160-80-160 80v-200H160q-33 0-56.5-23.5T80-360v-440q0-33 23.5-56.5T160-880Zm0 320h640v-240H160v240Zm0 200v-440 440Z"/></svg>
+            Login
+        </h1>
+        <p class="subtitle">Enter your credentials to continue</p>
+      </div>
+
+      <div class="login-box">
+        <label>App IDs</label>
+        <input id="email" type="text" placeholder="Enter Email" class="input-field">
+        <label>App IDs</label>
+        <input id="password" type="password" placeholder="Enter Password" class="input-field">
+
+        <button class="btn" onclick="login()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg>
+            Login
+        </button>
+
+        <p id="msg" class="subtitle"></p>
+      </div>
+
+    </div>
+    <div class="preview-box">
+      <img src="Oracle-Logo.png" alt="AG Logo" class="header-logo" />
+      <h2>Oracle Guide Learning</h2>
+        <h3>CSS Navigator Team</h3>
+        <img src="https://i.ibb.co/b5FhtMsq/Pngtree-caliper-silhouette-monogram-logo-minimalist-23352940.png" alt="Navigator Logo" class="login-logo" />
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p class="footer-title">Designed By : aathish.r@oracle.com</p>
+    </div>
+  </footer>
+
+  <script src="login_script.js"></script>
+</body>
+</html>

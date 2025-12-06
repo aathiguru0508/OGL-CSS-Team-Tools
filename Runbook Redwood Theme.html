@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1255">
+    <title>Oracle Guided Learning Design Kit</title>
+    <link rel="stylesheet" type="text/css" href="https://guidedlearning.oracle.com/player/latest/static/css/stTip_2.css" />
+    <link rel="stylesheet" type="text/css" href="https://guidedlearning.oracle.com/static/fonts/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://guidedlearning.oracle.com/static/tipcms/css/guide-export-preview.css" />
+    <link rel="stylesheet" type="text/css" href="https://guidedlearning.oracle.com/static/tipcms/css/newpage.css" />
+    <link rel="stylesheet" type="text/css" href="https://guidedlearning.oracle.com/static/tipcms/css/convergence-widget.css" />
+    <link rel="stylesheet" type="text/css" href="https://guidedlearning.oracle.com/static/tipcms/css/redwood.css" />
+    <link rel="stylesheet" type="text/css" href="https://guidedlearning.oracle.com/static/tipcms/css/design-kit.css" />
+    <link rel="stylesheet" type="text/css" href="https://guidedlearning.oracle.com/static/tipcms/widget/rw-widget-tasklist.css">
+    <style type="text/css">
+    /**
+     Use the CSS styles below to customize the look and feel of your tooltips.
+     When ready, upload this to Oracle Guided Learning @ https://guidedlearning.oracle.com/account/theme/
+     If you have any questions - https://help-education.oracle.com/apex/f?p=164:51:::::APP_P_TYPE:BASE
+
+     All of your CSS styles must go between the IRIDIZE_CUSTOM_THEME_START and IRIDIZE_CUSTOM_THEME_END comment lines.
+
+     //To change the header text we should use
+     .ou-header:before{
+        content:'Oracle Guided Learning';
+    }
+     To change OGL3 styles, use the following css rules:
+     // to change color or widget
+     .ouc-widget { background-color: #ED6B1A; }
+     // change color when you mouse over the widget
+     .ouc-widget__launch a:hover { background-color: #ED6B1A; }
+     // to change launcher color background
+     .ou-convergence-launcher { background: #ED6B1A; }
+     // to change header text
+     .ou-header { content: ‘oracle guided learning’; }
+     // to change the attribute of header logo Ex the “O”
+     .ou-logo {
+         display: inline-block;
+         background-image: url(/static/tipcms/images//o-tag-logo.svg);
+         background-repeat: no-repeat;
+         width: 20px;
+         height: 20px;
+         margin: 7px 5px 0px 0px;
+     }
+     // to change the attributes, like color of tray panel
+     .ou-panel {
+         display: -webkit-box;
+         display: flex;
+         width: 400px;
+         height: 600px;
+         color: #000000;
+         background-color: #FFFFFF;
+     }
+
+     **/
+
+
+
+    /*IRIDIZE_CUSTOM_THEME_START*/
+    
+    
+    
+       /*Step Guide Theme for Runbook*/
+
+/* Header Styles */
+.ogl-rw-step-guide-body{
+    background-image: url(https://i.ibb.co/XrPyZmF0/Background-Light.png);
+    background-size: cover;
+    background-color: #f0eeec;
+    background-repeat: repeat;
+
+}
+.ogl-rw-step-guide--header {
+    background-color: #3A3632; /* A dark, deep charcoal gray */
+    color: #ffffff; /* White text for contrast */
+    height: 60px; /* Standard height for an application header */
+    width: 100%;
+    
+    /* Layout using Flexbox */
+    display: flex;
+    justify-content: center;; /* Pushes left and right sections apart */
+    align-items: left; /* Vertically centers all elements */
+    
+    top: 0;
+    z-index: 1000;
+    
+    /* Optional: Subtle line at the bottom */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+/* Title */
+.ogl-rw-step-guide--title{
+    font-size: 18px;
+    font-weight: 600; /* Semi-bold */
+    margin: 0;
+    
+}
+
+
+.ogl-rw-step-guide--unpin-img {
+    stroke: #919191;
+    display: none;
+}
+.ogl-rw-step-guide--header--container{
+    display: none;
+}
+
+
+/* Separator */
+.ogl-rw-step-guide--separator {
+    display: none;
+}
+
+/* Steps Container */
+.ogl-rw-step-guide--steps {
+    margin-top: 40px !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 80px !important; 
+    display: inline-block;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+    padding: 15px 60px;
+}
+
+/* Step Box Styling */
+.ogl-rw-step-guide--steps--content {
+    background: #ffffff;
+    background-image: url(https://navigator.oracle.com/navigator-ui/styles/images/color_stripe-1.jpg);
+    background-repeat: repeat-x;
+    background-position: top;
+    font-size: 30px;
+    border-radius: 6px;
+    padding: 18px;
+    box-shadow: 0 5px 12px #00000050;
+    overflow-wrap: break-word;
+    transition: box-shadow 0.3s, background 0.3s;
+    position: relative;
+    width: 89vw;
+    min-height: 95vh;
+    margin: 0%;
+}
+
+/* Step Title */
+.ogl-rw-step-guide--step--title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #161513;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* Footer Section */
+.ogl-rw-step-guide--footer {
+    background: #3A3632;
+    background-repeat: repeat;
+    border-top: 1px solid #ccc;
+    height: 38px;
+    padding: 12px 20px;
+    display: flex;
+    position: fixed;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.ogl-rw-step-guide--footer--export--form-group{
+    display: none;
+}
+
+.ogl-rw-step-guide--footer--export svg:hover {
+    transform: scale(1.1);
+}
+
+/* Exit Button */
+.ogl-rw-step-guide--footer--exit-btn {
+    background-color:  #D4CFCA;
+    color: #161513;
+    border: 0.5px solid #161513;
+    border-radius: 6px;
+    padding: 8.5px 17px;
+    cursor: pointer;
+    align-items: center;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.ogl-rw-step-guide--footer--exit-btn:hover {
+    background-color:  #F1EFED;
+  color: #161513;
+}
+
+/* Hide Specific Sections */
+.ogl-rw-step-guide--header--toggle,
+.ogl-rw-step-guide--step--title {
+    display: none;
+}
+
+/* Step 1 as Heading */
+.ogl-rw-step-guide--steps--content:first-of-type {
+    display: grid; /* allows flexible layout for inner elements */
+    grid-column: 1 / -1;
+    background: none;
+    color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px #00000000;
+    margin-bottom: 5px;
+    margin-top: 1px;
+    overflow: hidden;
+    min-height: 10vh !important;
+    padding-bottom: 0px;
+}
+
+/* List Inside Steps */
+.ogl-rw-step-guide--steps--list {
+    padding: 8px 0;
+    margin-top: 5px;
+    color: #333;
+}
+
+.oracle-flat-button {
+  padding: 10px 18px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Oracle Sans", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.oracle-flat-button:hover {
+  background-color: #eaeaea;
+  border-color: #999;
+}
+
+.ogl-rw-step-guide--footer--export--email-img, .ogl-rw-step-guide--footer--export--print-img *{
+      display: none !important;
+}
+
+
+.ogl-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  justify-items: center;
+}
+
+.ogl-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #0000002e;
+}
+
+
+.ogl-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  font-size: 14px;
+  color: #444;
+}
+
+.ogl-version {
+  background-color: #f3f3f3;
+  color: #333;
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ogl-subtitle {
+  color: #555;
+  font-weight: 500;
+}
+
+.ogl-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 16px 20px 16px;
+  line-height: 1.4;
+  flex-grow: 1;
+    
+  /* --- Styles for Single-Line Truncation (The "Enable Generative AI..." look) --- */
+  
+  /* 1. Force the text onto a single line */
+  white-space: nowrap; 
+
+  /* 2. Hide any content that overflows the container width */
+  overflow: hidden;
+
+  /* 3. Display the ellipsis where the text is cut off */
+  text-overflow: ellipsis;
+}
+
+.ogl-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: #F5F4F2;
+    border-top: 1px solid #eee;
+    padding: 30px 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+.ogl-card-footer img {
+  width: 22px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.ogl-card-footer img:hover {
+  opacity: 3;
+  width: 23px;
+}
+
+
+    
+    
+    /*IRIDIZE_CUSTOM_THEME_END*/
+    </style>
+</head>
+
+<body style="background-color:#dddddd;">
+    <div class="ogl-kit-nav">
+        <div class="ogl-kit-header">
+            <h1>Guided Learning Elements</h1>
+            <div class="ogl-kit-navigation">
+                <nav>
+                    <ul>
+                      <li class="ogl-kit-navigation-btn ogl-kit-navigation-active"><a>Legacy</a> </li>
+                      <li class="ogl-kit-navigation-btn"><a>Redwood</a> </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+    </div>
+
+    <section id="ogl-kit">
+        <article class="ogl-kit-panel" id="ogl-legacy-kit-container">
+            <div class="legacy-tips-container" style="margin-top: 100px;" >
+                <div class="ir-beacon ir-showBeacon" style="top: 115px;left: 65px;"></div>
+                <div class="ir-marker ir-animate-marker ir-showMarker" style="top: 221px;left: 895px;"><div class="ir-marker-beacon"></div></div>
+                <div style="position:absolute;right:50%;margin-right:500px;top:110px;">
+                    <div class="sttip">
+                        <div class="tooltip showPrevBt fade top top-left in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div role="region" tabindex="999" aria-label="Steps"> <div data-iridize-role="title" class="popover-title"> <div class="view-less-container"> <div class="view-less"><button class="icon-chevron-down" aria-label="View less contents" ></button></div> &nbsp;<button aria-label="Close" data-iridize-role="closeBt">&#10005;</button> </div> </div> <div class="popover-content"> <div data-iridize-id="content">I am an Iridize tooltip</div> <div class="view-more"><button class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter" data-iridize-id="footer"> <div data-iridize-role="closeBtPane"><span class="steps-count">Step <span data-iridize-role="stepCount"></span>/<span data-iridize-role="stepsCount"></span></span><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane"><button tabindex="999" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" >Back</button><a tabindex="999" role="button" aria-label="" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);">Next</a></div> </div> </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;left:51.5%;margin-left:200px;top:80px;">
+                    <div class="sttip">
+                        <div class="tooltip ir-hoverTip showLaterBt fade top top-right in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div role="region" tabindex="999" aria-label="Steps"> <div data-iridize-role="title" class="popover-title"> <div class="view-less-container"> <div class="view-less"><button class="icon-chevron-down" aria-label="View less contents" ></button></div> &nbsp;<button aria-label="Close" data-iridize-role="closeBt">&#10005;</button> </div> </div> <div class="popover-content"> <div data-iridize-id="content">I am an Iridize hover tooltip! <br/>Use the <b>ir-hoverTip</b> CSS class to style me</div> <div class="view-more"><button class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter" data-iridize-id="footer"> <div data-iridize-role="closeBtPane"><span class="steps-count">Step <span data-iridize-role="stepCount"></span>/<span data-iridize-role="stepsCount"></span></span><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane"><button tabindex="999" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" >Back</button><a tabindex="999" role="button" aria-label="" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);">Next</a></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;left:51.5%;margin-left:200px;top:550px;">
+                    <div class="sttip">
+                        <div class="tooltip fade hideNextBt bottom bottom-right in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div role="region" tabindex="999" aria-label="Steps"> <div data-iridize-role="title" class="popover-title"> <div class="view-less-container"> <div class="view-less"><button class="icon-chevron-down" aria-label="View less contents" ></button></div> &nbsp;<button aria-label="Close" data-iridize-role="closeBt">&#10005;</button> </div> </div> <div class="popover-content"> <div data-iridize-id="content">I am an Iridize tooltip</div> <div class="view-more"><button class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter" data-iridize-id="footer"> <div data-iridize-role="closeBtPane"><span class="steps-count">Step <span data-iridize-role="stepCount"></span>/<span data-iridize-role="stepsCount"></span></span><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane"><button tabindex="999" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" >Back</button><a tabindex="999" role="button" aria-label="" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);">Next</a></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;right:50%;margin-right:500px;top:550px;">
+                    <div class="sttip">
+                        <div class="tooltip fade hideNextBt showPrevBt bottom bottom-left in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div role="region" tabindex="999" aria-label="Steps"> <div data-iridize-role="title" class="popover-title"> <div class="view-less-container"> <div class="view-less"><button class="icon-chevron-down" aria-label="View less contents" ></button></div> &nbsp;<button aria-label="Close" data-iridize-role="closeBt">&#10005;</button> </div> </div> <div class="popover-content"> <div data-iridize-id="content">I am an Iridize tooltip</div> <div class="view-more"><button class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter" data-iridize-id="footer"> <div data-iridize-role="closeBtPane"><span class="steps-count">Step <span data-iridize-role="stepCount"></span>/<span data-iridize-role="stepsCount"></span></span><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane"><button tabindex="999" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" >Back</button><a tabindex="999" role="button" aria-label="" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);">Next</a></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;top:110px;left:50%;margin-left:-140px">
+                    <div class="sttip">
+                        <div class="tooltip fade hideNextBt hideStepCounter top in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div role="region" tabindex="999" aria-label="Steps"> <div data-iridize-role="title" class="popover-title"> <div class="view-less-container"> <div class="view-less"><button class="icon-chevron-down" aria-label="View less contents" ></button></div> &nbsp;<button aria-label="Close" data-iridize-role="closeBt">&#10005;</button> </div> </div> <div class="popover-content"> <div data-iridize-id="content">I am an Iridize tooltip</div> <div class="view-more"><button class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter" data-iridize-id="footer"> <div data-iridize-role="closeBtPane"><span class="steps-count">Step <span data-iridize-role="stepCount"></span>/<span data-iridize-role="stepsCount"></span></span><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane"><button tabindex="999" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" >Back</button><a tabindex="999" role="button" aria-label="" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);">Next</a></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;top:250px;left:50%;margin-left:-140px">
+                    <div class="sttip">
+                        <div class="tooltip fade in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div role="region" tabindex="999" aria-label="Steps"> <div data-iridize-role="title" class="popover-title"> <div class="view-less-container"> <div class="view-less"><button class="icon-chevron-down" aria-label="View less contents" ></button></div> &nbsp;<button aria-label="Close" data-iridize-role="closeBt">&#10005;</button> </div> </div> <div class="popover-content"> <div data-iridize-id="content">Use this tooltip to theme the tip's content.                <h1>H1 heading </h1>                 <h2>H2 heading </h2>                 <h3>H3 heading </h3>                 <b>bolded text </b> standard text and a <a href="#">nice link</a></div> <div class="view-more"><button class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter" data-iridize-id="footer"> <div data-iridize-role="closeBtPane"><span class="steps-count">Step <span data-iridize-role="stepCount"></span>/<span data-iridize-role="stepsCount"></span></span><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane"><button tabindex="999" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" >Back</button><a tabindex="999" role="button" aria-label="" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);">Next</a></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;top:550px;left:50%;margin-left:-140px">
+                    <div class="sttip">
+                        <div class="tooltip fade bottom in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div role="region" tabindex="999" aria-label="Steps"> <div data-iridize-role="title" class="popover-title"> <div class="view-less-container"> <div class="view-less"><button class="icon-chevron-down" aria-label="View less contents" ></button></div> &nbsp;<button aria-label="Close" data-iridize-role="closeBt">&#10005;</button> </div> </div> <div class="popover-content"> <div data-iridize-id="content">I am an Iridize tooltip</div> <div class="view-more"><button class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter" data-iridize-id="footer"> <div data-iridize-role="closeBtPane"><span class="steps-count">Step <span data-iridize-role="stepCount"></span>/<span data-iridize-role="stepsCount"></span></span><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane"><button tabindex="999" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" >Back</button><a tabindex="999" role="button" aria-label="" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);">Next</a></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;top:350px;right:50%;margin-right:484px">
+                    <div class="sttip">
+                        <div class="tooltip fade left in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div role="region" tabindex="999" aria-label="Steps"> <div data-iridize-role="title" class="popover-title"> <div class="view-less-container"> <div class="view-less"><button class="icon-chevron-down" aria-label="View less contents" ></button></div> &nbsp;<button aria-label="Close" data-iridize-role="closeBt">&#10005;</button> </div> </div> <div class="popover-content"> <div data-iridize-id="content">I am an Iridize tooltip</div> <div class="view-more"><button class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter" data-iridize-id="footer"> <div data-iridize-role="closeBtPane"><span class="steps-count">Step <span data-iridize-role="stepCount"></span>/<span data-iridize-role="stepsCount"></span></span><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane"><button tabindex="999" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" >Back</button><a tabindex="999" role="button" aria-label="" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);">Next</a></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;top:350px;left:51.5%;margin-left:174px;">
+                    <div class="sttip">
+                        <div class="tooltip fade in right" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div role="region" tabindex="999" aria-label="Steps"> <div data-iridize-role="title" class="popover-title"> <div class="view-less-container"> <div class="view-less"><button class="icon-chevron-down" aria-label="View less contents" ></button></div> &nbsp;<button aria-label="Close" data-iridize-role="closeBt">&#10005;</button> </div> </div> <div class="popover-content"> <div data-iridize-id="content">I am an Iridize tooltip</div> <div class="view-more"><button class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter" data-iridize-id="footer"> <div data-iridize-role="closeBtPane"><span class="steps-count">Step <span data-iridize-role="stepCount"></span>/<span data-iridize-role="stepsCount"></span></span><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane"><button tabindex="999" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" >Back</button><a tabindex="999" role="button" aria-label="" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);">Next</a></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="ou-panel ou-convergence-widget" style="height: 718px; position: absolute; top:900px; left:300px;">
+                <nav class="ou-panel__nav" style="z-index: 9999999999;">
+                    <div class="ou-panel__navheader">
+                        <svg class="pointer-logo"><use href="https:////guidedlearning.oracle.com/static/tipcms/img/sprite.svg#guide-arrow-icon_header"></use></svg>
+                    </div>
+                    <div class="ou-panel__navsearch">
+                        <input disabled="" id="nl-s" name="navlist" ng-checked="searchItems.length" type="radio">
+                        <label aria-label="All" for="nl-s">
+                            <span class="fa fa-search"></span>
+                        </label>
+                    </div>
+                    <section class="ou-panel__navlist">
+                        <ul>
+                            <li class="select-all-nav-list">
+                                <input name="navlist" type="radio">
+                                <label class="select-all-nav">
+                                    <span class="ogl-icon ogl-icon--all-groups select-all-nav-icon"></span>
+                                </label>
+                            </li>
+                            <span>
+                                <div>
+                                    <li title="Reference" class="ogl-icon--reference-navlist">
+                                        <input name="navlist" type="radio">
+                                        <button aria-label="Reference Display Group" class="dg-nav ogl-icon--reference-nav">
+                                            <span class="ogl-icon ogl-icon--reference"></span>
+                                        </button>
+                                    </li>
+                                </div>
+                            </span>
+                        </ul>
+                    </section>
+                </nav>
+                <section class="ou-panel__content" style="z-index: 9999999999;">
+                    <div class="ou-panel__header">
+                        <svg class="ou-logo"><use href="https:////guidedlearning.oracle.com/static/tipcms/img/sprite.svg#oracle-logo_header"></use></svg>
+                        <h1 class="ou-header"></h1>
+                        <span class="ou-panel__close">
+                            <button aria-label="Close Help Widget">
+                                <svg viewBox="0 0 60 60">
+                                    <path d="M35.7,30L58.8,6.8C59.6,6.1,60,5.1,60,4c0-2.2-1.8-4-4-4c-1.1,0-2.1,0.4-2.8,1.2L30,24.3
+                            L6.8,1.2C6.1,0.4,5.1,0,4,0C1.8,0,0,1.8,0,4c0,1.1,0.4,2.1,1.2,2.8L24.3,30L1.2,53.2C0.4,53.9,0,54.9,0,56c0,2.2,1.8,4,4,4
+                            c1.1,0,2.1-0.4,2.8-1.2L30,35.7l23.2,23.2c0.7,0.7,1.7,1.2,2.8,1.2c2.2,0,4-1.8,4-4c0-1.1-0.4-2.1-1.2-2.8L35.7,30z"></path>
+                                </svg>
+                            </button>
+                        </span>
+                    </div>
+                        <div class="ou-panel__search">
+                            <input class="ou-panel__searchbar" type="text" placeholder="What are you looking for?">
+                            <span class="ou-panel__searchbar__go fa fa-search"></span>
+                        </div>
+                    <div class="ouc-panel__content-list">
+                        <section class="ou-panel__content-group ogl-icon--reference-group">
+                            <h2 class="ou-panel__content-group__title ogl-icon--reference-name">
+                                <span class="icons ogl-icon--reference"></span> Reference </h2>
+                                <app-content-list>
+                                    <ul>
+                                        <li class="uc-panel__content-group__row">
+                                            <app-content-item>
+                                                <span class="uc-panel__item">
+                                                    <button class="uc-panel__item__title">HR Manual</button>
+                                                </span>
+                                            </app-content-item>
+                                        </li>
+                                        <li class="uc-panel__content-group__row">
+                                            <app-widget-task-list-item>																				
+                                                <span class="uc-panel__item uc-panel__item__task">
+                                                   <div title="Task List" class="uc-panel__item__title">
+                                                      <div class="ui-panel__item__title">Task guide</div>
+                                                      <div class="uc-panel__item__task__status"><span>1/2</span>
+                                                      </div>
+                                                   </div>
+                                                   <button class="uc-panel__item__open" aria-label="Task guide task list with completion status 0 out of 2 . Click here for details. Later use the same button to collapse the task list details">
+                                                   <span tabindex="-1" class="uc-panel__item__open__icon__wrapper">
+                                                   <span class="uc-panel__item__open__icon icons fa-caret-up" ></span>
+                                                   </span>
+                                                   </button>
+                                                   <div class="uc-panel__item__task-details">
+                                                      <app-task-list-details>
+                                                         <div>
+                                                            <div tabindex="-1"></div>
+                                                            <div style="height: unset;">
+                                                               <div class="ou-panel__task__details" style="visibility: visible;">
+                                                                  <p class="ou-panel__task__desc"></p>
+                                                                  <app-task-list-item>
+                                                                     <span class="ou-task-list__item">
+                                                                        <button class="ou-task-list__item__title" aria-label="Selected task list item which is a Process guide with name Onboarding Process" title="Process">
+                                                                           <i class="ou-task-list__item__status ou-task-list__item__status--completed"></i>
+                                                                           <div class="ou-task-list__item__title__text">Onboarding Process</div>
+                                                                        </button>
+                                                                     </span>
+                                                                  </app-task-list-item>
+                                                                  <app-task-list-item>
+                                                                     <span class="ou-task-list__item">
+                                                                        <button class="ou-task-list__item__title" aria-label="Selected task list item which is a Process guide with name Hiring Process" title="Process">
+                                                                           <i class="ou-task-list__item__status"></i>
+                                                                           <div class="ou-task-list__item__title__text">Hiring Process</div>
+                                                                        </button>
+                                                                     </span>
+                                                                  </app-task-list-item>
+                                                                  <button aria-label="Reset Task List Progress" class="ou-panel__task__reset">Reset Task List</button>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </app-task-list-details>
+                                                   </div>
+                                                </span>
+                                            </app-widget-task-list-item>
+                                        </li>
+                                    </ul>
+                                </app-content-list>
+                            </section>
+                    </div>
+                </section>
+            </div>
+        
+            <div class="ou-convergence-widget" style="height: 196px; box-shadow: 2px 2px 5px rgb(0 0 0 / 40%); position: absolute; top: 1750px;left: 1000px;">
+                <span class="ou-task-list__autoload__dragger" data-iridize-nofb="" style="height: 33px;"></span>
+                <div name="ou-task-list__autoload" class="ou-task-list__autoload__iframe" style="height: 196px;">
+                   <div>
+                      <div tabindex="-1"></div>
+                      <div class="ou-panel__task__header">
+                         <div class="ou-panel__task__header__title">Task guide</div>
+                         <div class="ou-panel__task__header__actions"><button class="ou-panel__task__header__maximize ou-panel__task__header__minimize" aria-label="Minimize Task List"><span tabindex="-1" class="ou-panel__task__header__maximize__icon__wrapper"><i aria-hidden="true" class="ou-panel__task__header__maximize__icon fa fa-window-minimize ou-panel__task__header__minimize__icon"></i></span></button><button aria-label="Close Task List" class="ou-panel__task__header__close"><span tabindex="-1" class="ou-panel__task__header__close__icon__wrapper"><i aria-hidden="true" class="ou-panel__task__header__close__icon fa fa-close"></i></span></button></div>
+                      </div>
+                      <div class="ou-panel__task__details__wrapper" style="height: 163px;">
+                         <div class="ou-panel__task__details" style="visibility: visible;">
+                            <p class="ou-panel__task__desc"></p>
+                            <p class="ou-panel__task__status">1/2 Completed</p>
+                            <app-task-list-item>
+                               <span class="ou-task-list__item">
+                                  <button class="ou-task-list__item__title" aria-label="Selected task list item which is a Process guide with name Onboarding Process" title="Process">
+                                     <i class="ou-task-list__item__status ou-task-list__item__status--completed"></i>
+                                     <div class="ou-task-list__item__title__text">Onboarding Process</div>
+                                  </button>
+                               </span>
+                            </app-task-list-item>
+                            <app-task-list-item>
+                               <span class="ou-task-list__item">
+                                  <button class="ou-task-list__item__title" aria-label="Selected task list item which is a Process guide with name Hiring Process" title="Process">
+                                     <i class="ou-task-list__item__status"></i>
+                                     <div class="ou-task-list__item__title__text">Hiring Process</div>
+                                  </button>
+                               </span>
+                            </app-task-list-item>
+                            <button aria-label="Reset Task List Progress" class="ou-panel__task__reset">Reset Task List</button>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+        
+            <div class="ou-convergence-launcher" style="position:absolute; top:900px;left:200px; ">
+                <span id="dragger" aria-label="Move" title="Move"></span>
+                <aside class="ouc-widget">
+                    <div class="ouc-widget__launch">
+                        <span id="launchConvIconLoader" class="fa fa-spinner fa-spin ouc-widget__launch-loader" style="display: none;"></span>
+                        <a href="JavaScript:void(0);" id="launchConv" title="Help Center" aria-label="HELP CENTER" style="display: inline;">
+                            <svg id="launchConvIcon" class="ouc-widget__launch-icon">
+                                <use href="https://guidedlearning.oracle.com/static/tipcms/img/sprite.svg#ogl-help-icon"></use>
+                              </svg>
+                        </a>
+                    </div>
+                    <div class="ouc-widget__move" aria-label="Move">
+                        <svg id="launchConvIcon" class="ouc-widget__move-icon">
+                            <use href="https://guidedlearning.oracle.com/static/tipcms/img/sprite.svg#ogl-drag-icon"></use>
+                          </svg>
+                    </div>
+                </aside>
+            </div>
+
+        
+            <div style="position:absolute;top:1700px;margin-left: 200px; text-align:center;">
+        
+        
+        <span style="background-color: red;font-size: 20px;color: white;padding: 6px;line-height: 30px;">
+            Style the User Feedback widget below.<br>
+            This widget will be displayed when a user completes a guide.
+        </span>
+        
+        <div class="ir-survey ir-survey__center ir-survey__show ir-survey__shown" style="text-align:center;margin: 0 auto;">
+            <div class="ir-survey-content">
+                <div class="ir-survey-close ir-float-container">
+                    <a href="javascript:void(0);" class="btnLater ir-pushRight ir-color-inherit" data-iridize-role="closeBt"></a>
+                </div>
+                <div class="ir-survey-question "></div>
+                <p></p>
+                <div class="ir-survey-answers">
+                    <a class="ir-survey-answer ir-survey-sad">&nbsp;</a>
+                    <a href="javascript:void(0);" class="ir-survey-answer " data-iridize-role="nextBt">1</a>
+                    <a href="javascript:void(0);" class="ir-survey-answer " data-iridize-role="nextBt">2</a>
+                    <a href="javascript:void(0);" class="ir-survey-answer " data-iridize-role="nextBt">3</a>
+                    <a href="javascript:void(0);" class="ir-survey-answer " data-iridize-role="nextBt">4</a>
+                    <a href="javascript:void(0);" class="ir-survey-answer " data-iridize-role="nextBt">5</a>
+                    <a class="ir-survey-answer ir-survey-happy">&nbsp;</a></div>
+            </div>
+            <div class="ir-credit">
+                
+                    
+                
+            </div>
+        
+            </div>
+            
+        
+            </div>
+        
+            <div style="position:absolute; top:900px;left: calc(1000px + 197px); transform: translateX(-50%); height: 745px; width:5px;">
+                <div id="iridizeStepGuideIframe" class="iridize-step-guide-frame"></div>
+            </div>
+        
+            <div style="position:absolute; top:900px;left: calc(1000px + 207px); transform: translateX(-605px); height: 745px; width:100px;">
+                <div class="iridizeStepGuideCloserButton" id="iridizeStepGuideCloserButton">
+                    <a class="close" title="Close" role="button" aria-label="Close step guide" href="#">&times;</a><br/>
+                    <a class="unpin" title="Unpin" role="button" aria-label="Unpin step guide" href="#">&gt;</a>
+                </div>
+            </div>
+        
+            <div id="wrap" style="position:absolute; top:900px;left:1000px; transform: translateX(-50%); width:400px;">
+                <ir-guide-previewer-directive class="ng-isolate-scope">
+        
+                    <section class="ir-step__message">
+                        <div class="ir-step__message__header">
+                            <p>Please note that the following guide steps screenshots are not included in this PDF export file:</p>
+                            <button class="ir-step__header__close"><span class="fa fa-close"></span></button>
+                        </div>
+                        <ul>
+                            <li>
+                                1. welcome to OGL
+                            </li>
+                        </ul>
+                        <p>Would you like to include their screenshots?
+                            <a>Return to the editor</a>
+                        </p>
+                    </section>
+        
+                    <aside class="ir-step ir-step__print" id="step-sidebar" role="none">
+                        <header class="ir-step__header">
+                            <h1 class="ir-step__header__title ng-binding" tabindex="-1" id="stepHeaderTitle"
+                                aria-label="Step guide for test guide">test guide</h1>
+                            <div class="updatedAt"> Last updated: <span class="ng-binding">03/06/2021</span> </div>
+                        </header>
+        
+        
+                        <section class="ir-step-content ir-iframe-section">
+                            <h2 class="ir-step-content__title">Step Video</h2>
+                            <iframe
+                                class="ir-iframe-content"></iframe>
+                        </section>
+        
+                        <ir-step-save-export-directive class="ng-scope">
+                            <section class="ir-step-actions">
+                                <div class="ir-step-actions__toggles">
+                                    <button aria-label="Show step images" id="btnShowPics" class="btn-focus toggle-selected"><span class="fa fa-th-large"></span></button>
+                                    <button aria-label="Hide step images" id="btnHidePics" class="btn-focus "><span class="fa fa-bars"></span></button>
+                                </div>
+                                <div class="ir-step-actions__print-email">
+                                    <button aria-label="Print step guide"
+                                        class="btn-focus ng-scope">
+                                        <span class="fa fa-print"></span>Print</button>
+                                    <button aria-label="Send step guide as email"
+                                        class="btn-focus ng-scope"><span
+                                            class="fa fa-mail-forward"></span>Email</button>
+                                </div>
+                            </section>
+                        </ir-step-save-export-directive>
+        
+                        <section class="ir-step-content ng-scope"
+                            role="none">
+                            <ir-step-previewer-directive show-watermark="showWatermark" index="$index" step="step"
+                                class="ng-isolate-scope">
+                                <div>
+                                </div>
+                                <h2 class="ir-step-content__title ng-binding">Step 1</h2>
+                                <div class="ir-step-content__caption ng-scope ng-binding">
+                                    <p>welcome to OGL</p>
+        
+                            </ir-step-previewer-directive>
+                        </section>
+                        <section class="ir-step-content ng-scope" role="none">
+                            <ir-step-previewer-directive show-watermark="showWatermark" index="$index" step="step"
+                                class="ng-isolate-scope">
+                                <div>
+                                </div>
+                                <h2 class="ir-step-content__title ng-binding">Step 2</h2>
+                                <div class="ir-step-content__caption ng-scope ng-binding">Click <strong>Google Search</strong> </div>
+        
+                            </ir-step-previewer-directive>
+                        </section>
+                        <ir-step-save-export-directive class="ng-scope">
+                            <section class="ir-step-actions">
+                                <div class="ir-step-actions__toggles">
+                                    <button aria-label="Show step images" id="btnShowPics" class="btn-focus toggle-selected"><span class="fa fa-th-large"></span></button>
+                                    <button aria-label="Hide step images" id="btnHidePics" class="btn-focus "><span class="fa fa-bars"></span></button>
+                                </div>
+                                <div class="ir-step-actions__print-email">
+                                    <button aria-label="Print step guide"
+                                        class="btn-focus ng-scope">
+                                        <span class="fa fa-print"></span>Print</button>
+                                    <button aria-label="Send step guide as email"
+                                        class="btn-focus ng-scope"><span
+                                            class="fa fa-mail-forward"></span>Email</button>
+                                </div>
+                            </section>
+                        </ir-step-save-export-directive>
+                    </aside>
+                </ir-guide-previewer-directive>
+        
+            </div>
+        
+      
+        </article>
+        <article class="ogl-kit-panel" id="ogl-rw-kit-container" style="display: none;margin-top: 100px;">
+            <div class="ogl-rw-tips-container" style="position: absolute;top: 100px;left: 50%;">
+                <div style="position:absolute;right:50%;margin-right:550px;top:110px;">
+                    <div class="sttip">
+                        <div class="tooltip ogl-rw-tip showPrevBt fade top top-left in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div id="tooltip_" class="ogl-rw-tip" role="dialog" aria-modal="true" tabindex="999" aria-label="Steps"> <div class="dragger-tip-container" title="Drag tip"></div> <div data-iridize-role="title" class="ogl-rw-popover-title"> <span id="tooltipStepCounter_" class="steps-count">Step <span class="ogl-rw-tip--step-count"><span id="tooltipCurrentStepCount_" data-iridize-role="stepCount"></span> of <span id="tooltipTotalStepCount_" data-iridize-role="stepsCount"></span></span></span> <div class="view-less-container"> <div class="view-less"><button id="tooltipResizeMinimize_" class="icon-chevron-down" aria-label="View less contents" ></button></div> </div> </div> <div class="ogl-rw-popover-content"> <div id="tooltipContent_" data-iridize-id="content">I am a redwood tooltip</div> <div class="view-more"><button id="tooltipResizeMaximize_" class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter full-buttons" data-iridize-id="footer"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="fullButton_close">Close</button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="fullButton_remindLater">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="fullButton_back">Back</button><a title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="fullButton_next">Next</a></div> </div> <div class="stFooter small-buttons" data-iridize-id="footer" style="display: none;"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button title="Close" class="close-btn" aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="smallButton_close"></button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button title="Remind me later" tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="smallButton_remindLater"></button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="smallButton_back"></button><button title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="smallButton_next"></button></div> </div> </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;left:50%;margin-left:250px;top:80px;">
+                    <div class="sttip">
+                        <div class="tooltip ogl-rw-tip ir-hoverTip showLaterBt fade top top-right in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div id="hovertip_" role="dialog" aria-modal="true" class="ogl-rw-tip ogl-rw-hovertip" class="ogl-rw-tip-hover" role="region" tabindex="999" aria-label="Steps"> <div class="dragger-tip-container" title="Drag tip"></div> <div class="view-less-container"> <div class="view-less"><button id="hovertipResizeMinimize_" class="icon-chevron-down" aria-label="View less contents" ></button></div> </div> <div class="ogl-rw-popover-content"> <div id="hovertipContent_" data-iridize-id="content">I am a redwood hover tooltip! <br/>Use the <b>ir-hoverTip</b> CSS class to style me</div> <div class="view-more"><button id="hovertipResizeMaximize_"class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter" data-iridize-id="footer"> <div data-iridize-role="closeBtPane"><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" aria-label="Remind me later button. Click to open options to select time interval." id="tooltipRemindMeLater__btn" class="prev-btn" data-iridize-role="laterBt">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080">Next Week</button></div></div></div></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;left:50%;margin-left:250px;top:550px;">
+                    <div class="sttip">
+                        <div class="tooltip ogl-rw-tip fade hideNextBt bottom bottom-right in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div id="tooltip_" class="ogl-rw-tip" role="dialog" aria-modal="true" tabindex="999" aria-label="Steps"> <div class="dragger-tip-container" title="Drag tip"></div> <div data-iridize-role="title" class="ogl-rw-popover-title"> <span id="tooltipStepCounter_" class="steps-count">Step <span class="ogl-rw-tip--step-count"><span id="tooltipCurrentStepCount_" data-iridize-role="stepCount"></span> of <span id="tooltipTotalStepCount_" data-iridize-role="stepsCount"></span></span></span> <div class="view-less-container"> <div class="view-less"><button id="tooltipResizeMinimize_" class="icon-chevron-down" aria-label="View less contents" ></button></div> </div> </div> <div class="ogl-rw-popover-content"> <div id="tooltipContent_" data-iridize-id="content">I am a redwood tooltip</div> <div class="view-more"><button id="tooltipResizeMaximize_" class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter full-buttons" data-iridize-id="footer"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="fullButton_close">Close</button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="fullButton_remindLater">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="fullButton_back">Back</button><a title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="fullButton_next">Next</a></div> </div> <div class="stFooter small-buttons" data-iridize-id="footer" style="display: none;"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button title="Close" class="close-btn" aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="smallButton_close"></button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button title="Remind me later" tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="smallButton_remindLater"></button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="smallButton_back"></button><button title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="smallButton_next"></button></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;right:50%;margin-right:550px;top:550px;">
+                    <div class="sttip">
+                        <div class="tooltip ogl-rw-tip fade hideNextBt showPrevBt bottom bottom-left in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div id="tooltip_" class="ogl-rw-tip" role="dialog" aria-modal="true" tabindex="999" aria-label="Steps"> <div class="dragger-tip-container" title="Drag tip"></div> <div data-iridize-role="title" class="ogl-rw-popover-title"> <span id="tooltipStepCounter_" class="steps-count">Step <span class="ogl-rw-tip--step-count"><span id="tooltipCurrentStepCount_" data-iridize-role="stepCount"></span> of <span id="tooltipTotalStepCount_" data-iridize-role="stepsCount"></span></span></span> <div class="view-less-container"> <div class="view-less"><button id="tooltipResizeMinimize_" class="icon-chevron-down" aria-label="View less contents" ></button></div> </div> </div> <div class="ogl-rw-popover-content"> <div id="tooltipContent_" data-iridize-id="content">I am a redwood tooltip</div> <div class="view-more"><button id="tooltipResizeMaximize_" class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter full-buttons" data-iridize-id="footer"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="fullButton_close">Close</button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="fullButton_remindLater">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="fullButton_back">Back</button><a title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="fullButton_next">Next</a></div> </div> <div class="stFooter small-buttons" data-iridize-id="footer" style="display: none;"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button title="Close" class="close-btn" aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="smallButton_close"></button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button title="Remind me later" tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="smallButton_remindLater"></button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="smallButton_back"></button><button title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="smallButton_next"></button></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;top:50px;left:50%;margin-left:-140px">
+                    <div class="sttip">
+                        <div class="tooltip ogl-rw-tip fade hideNextBt hideStepCounter top in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div id="tooltip_" class="ogl-rw-tip" role="dialog" aria-modal="true" tabindex="999" aria-label="Steps"> <div class="dragger-tip-container" title="Drag tip"></div> <div data-iridize-role="title" class="ogl-rw-popover-title"> <span id="tooltipStepCounter_" class="steps-count">Step <span class="ogl-rw-tip--step-count"><span id="tooltipCurrentStepCount_" data-iridize-role="stepCount"></span> of <span id="tooltipTotalStepCount_" data-iridize-role="stepsCount"></span></span></span> <div class="view-less-container"> <div class="view-less"><button id="tooltipResizeMinimize_" class="icon-chevron-down" aria-label="View less contents" ></button></div> </div> </div> <div class="ogl-rw-popover-content"> <div id="tooltipContent_" data-iridize-id="content">I am a redwood tooltip</div> <div class="view-more"><button id="tooltipResizeMaximize_" class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter full-buttons" data-iridize-id="footer"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="fullButton_close">Close</button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="fullButton_remindLater">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="fullButton_back">Back</button><a title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="fullButton_next">Next</a></div> </div> <div class="stFooter small-buttons" data-iridize-id="footer" style="display: none;"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button title="Close" class="close-btn" aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="smallButton_close"></button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button title="Remind me later" tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="smallButton_remindLater"></button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="smallButton_back"></button><button title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="smallButton_next"></button></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;top:250px;left:50%;margin-left:-140px">
+                    <div class="sttip">
+                        <div class="tooltip ogl-rw-tip fade in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div id="tooltip_" class="ogl-rw-tip" role="dialog" aria-modal="true" tabindex="999" aria-label="Steps"> <div class="dragger-tip-container" title="Drag tip"></div> <div data-iridize-role="title" class="ogl-rw-popover-title"> <span id="tooltipStepCounter_" class="steps-count">Step <span class="ogl-rw-tip--step-count"><span id="tooltipCurrentStepCount_" data-iridize-role="stepCount"></span> of <span id="tooltipTotalStepCount_" data-iridize-role="stepsCount"></span></span></span> <div class="view-less-container"> <div class="view-less"><button id="tooltipResizeMinimize_" class="icon-chevron-down" aria-label="View less contents" ></button></div> </div> </div> <div class="ogl-rw-popover-content"> <div id="tooltipContent_" data-iridize-id="content">Use this tooltip to theme the tip's content.                <h1>H1 heading </h1>                 <h2>H2 heading </h2>                 <h3>H3 heading </h3>                 <b>bolded text </b> standard text and a <a href="#">nice link</a></div> <div class="view-more"><button id="tooltipResizeMaximize_" class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter full-buttons" data-iridize-id="footer"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="fullButton_close">Close</button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="fullButton_remindLater">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="fullButton_back">Back</button><a title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="fullButton_next">Next</a></div> </div> <div class="stFooter small-buttons" data-iridize-id="footer" style="display: none;"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button title="Close" class="close-btn" aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="smallButton_close"></button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button title="Remind me later" tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="smallButton_remindLater"></button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="smallButton_back"></button><button title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="smallButton_next"></button></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;top:600px;left:50%;margin-left:-140px">
+                    <div class="sttip">
+                        <div class="tooltip ogl-rw-tip fade bottom in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div id="tooltip_" class="ogl-rw-tip" role="dialog" aria-modal="true" tabindex="999" aria-label="Steps"> <div class="dragger-tip-container" title="Drag tip"></div> <div data-iridize-role="title" class="ogl-rw-popover-title"> <span id="tooltipStepCounter_" class="steps-count">Step <span class="ogl-rw-tip--step-count"><span id="tooltipCurrentStepCount_" data-iridize-role="stepCount"></span> of <span id="tooltipTotalStepCount_" data-iridize-role="stepsCount"></span></span></span> <div class="view-less-container"> <div class="view-less"><button id="tooltipResizeMinimize_" class="icon-chevron-down" aria-label="View less contents" ></button></div> </div> </div> <div class="ogl-rw-popover-content"> <div id="tooltipContent_" data-iridize-id="content">I am a redwood tooltip</div> <div class="view-more"><button id="tooltipResizeMaximize_" class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter full-buttons" data-iridize-id="footer"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="fullButton_close">Close</button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="fullButton_remindLater">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="fullButton_back">Back</button><a title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="fullButton_next">Next</a></div> </div> <div class="stFooter small-buttons" data-iridize-id="footer" style="display: none;"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button title="Close" class="close-btn" aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="smallButton_close"></button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button title="Remind me later" tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="smallButton_remindLater"></button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="smallButton_back"></button><button title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="smallButton_next"></button></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;top:350px;right:50%;margin-right:540px">
+                    <div class="sttip">
+                        <div class="tooltip ogl-rw-tip fade left in" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div id="tooltip_" class="ogl-rw-tip" role="dialog" aria-modal="true" tabindex="999" aria-label="Steps"> <div class="dragger-tip-container" title="Drag tip"></div> <div data-iridize-role="title" class="ogl-rw-popover-title"> <span id="tooltipStepCounter_" class="steps-count">Step <span class="ogl-rw-tip--step-count"><span id="tooltipCurrentStepCount_" data-iridize-role="stepCount"></span> of <span id="tooltipTotalStepCount_" data-iridize-role="stepsCount"></span></span></span> <div class="view-less-container"> <div class="view-less"><button id="tooltipResizeMinimize_" class="icon-chevron-down" aria-label="View less contents" ></button></div> </div> </div> <div class="ogl-rw-popover-content"> <div id="tooltipContent_" data-iridize-id="content">I am a redwood tooltip</div> <div class="view-more"><button id="tooltipResizeMaximize_" class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter full-buttons" data-iridize-id="footer"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="fullButton_close">Close</button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="fullButton_remindLater">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="fullButton_back">Back</button><a title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="fullButton_next">Next</a></div> </div> <div class="stFooter small-buttons" data-iridize-id="footer" style="display: none;"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button title="Close" class="close-btn" aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="smallButton_close"></button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button title="Remind me later" tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="smallButton_remindLater"></button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="smallButton_back"></button><button title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="smallButton_next"></button></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div style="position:absolute;top:350px;left:50%;margin-left:240px;">
+                    <div class="sttip">
+                        <div class="tooltip ogl-rw-tip fade in right" style="display: block;">
+                            <div class="tooltip-arrow"></div>
+                            <div class="tooltip-arrow second-arrow"></div>
+                            <div class="popover-inner">
+                                
+                                    <div id="tooltip_" class="ogl-rw-tip" role="dialog" aria-modal="true" tabindex="999" aria-label="Steps"> <div class="dragger-tip-container" title="Drag tip"></div> <div data-iridize-role="title" class="ogl-rw-popover-title"> <span id="tooltipStepCounter_" class="steps-count">Step <span class="ogl-rw-tip--step-count"><span id="tooltipCurrentStepCount_" data-iridize-role="stepCount"></span> of <span id="tooltipTotalStepCount_" data-iridize-role="stepsCount"></span></span></span> <div class="view-less-container"> <div class="view-less"><button id="tooltipResizeMinimize_" class="icon-chevron-down" aria-label="View less contents" ></button></div> </div> </div> <div class="ogl-rw-popover-content"> <div id="tooltipContent_" data-iridize-id="content">I am a redwood tooltip</div> <div class="view-more"><button id="tooltipResizeMaximize_" class="icon-chevron-up" aria-label="View more contents" ></button></div> </div> <div class="stFooter full-buttons" data-iridize-id="footer"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="fullButton_close">Close</button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="fullButton_remindLater">Remind me later</button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="fullButton_back">Back</button><a title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="fullButton_next">Next</a></div> </div> <div class="stFooter small-buttons" data-iridize-id="footer" style="display: none;"> <div data-iridize-role="closeBtPane" class="close-bt-panel"><button title="Close" class="close-btn" aria-label="Close" id="tooltipClose_" data-iridize-role="closeBt" data-ogl-test-id="smallButton_close"></button><div class="later-btn--container" data-iridize-role="laterBtContainer"><button title="Remind me later" tabindex="999" id="tooltipRemindMeLater__btn" aria-label="Remind me later button. Click to open options to select time interval." class="prev-btn" data-iridize-role="laterBt" data-ogl-test-id="smallButton_remindLater"></button><div id="tooltipRemindMeLaterDropDown_" data-iridize-role="laterBtDropdown" class="later-btn--dropdown"><div><button data-iridize-role="laterOptionBt" value="20" id="remindMeOption_20" title="In 20 minutes">In 20 minutes</button><button data-iridize-role="laterOptionBt" value="60" id="remindMeOption_60" title="In 1 hour">In 1 hour</button><button data-iridize-role="laterOptionBt" value="180" id="remindMeOption_180" title="In 3 hours">In 3 hours</button><button data-iridize-role="laterOptionBt" value="1440" id="remindMeOption_1440" title="Tomorrow">Tomorrow</button><button data-iridize-role="laterOptionBt" value="10080" id="remindMeOption_10080" title="Next Week">Next Week</button></div></div></div></div> <div data-iridize-role="nextBtPane" class="next-bt-panel"><button title="Back" tabindex="999" id="tooltipBack_" class="prev-btn default-prev-btn" data-iridize-role="prevBt" aria-label="" data-ogl-test-id="smallButton_back"></button><button title="Next" tabindex="999" role="button" aria-label="" id="tooltipNext_" class="next-btn" data-iridize-role="nextBt" href="javascript:void(0);" data-ogl-test-id="smallButton_next"></button></div> </div> </div>
+                                
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ogl-rw-help-widget ogl-rw-convergence-widget" style="height: 718px; position: absolute; top:1100px; left:250px; z-index: 9999999999999;">
+                <section class="ogl-rw-help-widget--content" style="z-index: 9999999999; border-radius: 6px">
+                    <div class="ogl-rw-help-widget-header rw-bg-neutral-170">
+                        <div class="ogl-rw-help-widget-header--upper">
+                            <div class="ogl-rw-help-widget-header--title rw-text-white">Oracle Guided Learning</div>
+                            <button aria-label="Close Help Widget" class="ogl-rw-help-widget-header--close">
+                                <redwood-icon class="rw-icon rw-ux-ico-close rw-text-white"></redwood-icon>
+                            </button>
+                        </div>
+                        <div class="ogl-rw-help-widget-header--lower">
+                            <div class="ogl-rw-help-widget-header--search">
+                                <redwood-input-search class="rw-searchbar rw-theme-searchbar">
+                                    <span role="presentation" class="rw-searchbar-icon rw-icon rw-search"></span>
+                                    <div class="rw-searchbar-inputwrap">
+                                        <input type="text" class="rw-searchbar-input" placeholder="Search...">
+                                    </div>
+                                </redwood-input-search>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ogl-rw-help-widget--content-list">
+                        <section class="ogl-rw-help-widget--content-group ogl-icon--reference-group">
+                            <h2 class="ogl-rw-help-widget--content-group--title ogl-icon--reference-name">
+                                 Reference
+                            </h2>
+                                <app-content-list>
+                                    <ul>
+                                        <li class="ogl-rw-help-widget--content-group--row">
+                                            <help-widget-content-item>
+                                                <redwood-list-item class="rw-list-item" title="Beacon">
+                                                    <button rwtext="" class="ogl-rw-help-widget-item--title">HR Manual</button>
+                                                    <button aria-haspopup="true" title="Steps" class="ogl-rw-help-widget-item--step-menu" aria-label="Launch step guide menu for Beacon">
+                                                        <redwood-icon role="presentation" class="rw-icon rw-ux-ico-overflow-h"></redwood-icon>
+                                                    </button>
+                                                </redwood-list-item>
+                                            </help-widget-content-item>
+                                        </li>
+                                        <li class="ogl-rw-help-widget--content-group--row">
+                                            <help-widget-task-list-item>
+                                                <div class="aoprstd2 ogl-rw-help-widget-task-list--border">
+                                                    <redwood-list-item title="Task List" class="rw-list-item ogl-rw-help-widget-task-list">
+                                                        <button rwtext="" class="ogl-rw-help-widget-task-list--title">Task guide</button>
+                                                        <div class="ogl-rw-help-widget-task-list--status-container">
+                                                        <div title="Task list status" class="ogl-rw-help-widget-task-list--status">
+                                                            <span class="ogl-rw-help-widget-task-list--status--progress">1/2</span>
+                                                        </div>
+                                                        <button class="ogl-rw-help-widget-task-list--open" aria-label="Task guide task list with completion status 1 out of 2 . Click here for details. Later use the same button to collapse the task list details">
+                                                            <redwood-icon role="presentation" class="rw-icon rw-ux-ico-chevron-up" title="Close details"></redwood-icon>
+                                                        </button>
+                                                        </div>
+                                                    </redwood-list-item>
+                                                    <div class="ogl-rw-task-list-details--component">
+                                                        <task-list-details-v2>
+                                                            <div class="ogl-rw-task-list aoprstd2">
+                                                                <div tabindex="-1"></div>
+                                                                <div class="ogl-rw-task-list--details" style="visibility: visible;">
+                                                                    <span class="ogl-rw-task-list--desc" style="padding: 10px 19px;"></span>
+                                                                    <div style="height: unset;">
+                                                                        <activity-center-item>
+                                                                            <redwood-list-item class="rw-list-item ac-item ogl-rw-task-list-item" title="Lorem ipsum dolor amet">
+                                                                                <div class="ac-item--content-type ogl-rw-task-list-item--content-type" style="width: 60px;">
+                                                                                    <redwood-badge ><span class="rw-badge" >Process</span></redwood-badge>
+                                                                                </div>
+                                                                                <button class="ac-item--title ogl-rw-task-list-item--title"><span class="ac-item--title--text ogl-rw-task-list-item--title--text" >Onboarding Process</span></button>
+                                                                                <div class="ac-item--status ogl-rw-task-list-item--status rw-icon rw-ux-ico-checkbox-on" style="font-size: 20px;" ></div>
+                                                                                <button aria-haspopup="true" title="Steps" class="ac-item--step-menu ogl-rw-task-list-item--step-menu" aria-label="Launch step guide menu for pt_demo_pg_98114123">    
+                                                                                    <redwood-icon role="presentation" class="rw-icon rw-ux-ico-overflow-v"></redwood-icon>
+                                                                                </button>
+                                                                            </redwood-list-item>
+                                                                        </activity-center-item>
+                                                                        <activity-center-item>
+                                                                            <redwood-list-item class="rw-list-item ac-item ogl-rw-task-list-item" title="Lorem ipsum dolor amet">
+                                                                                <div class="ac-item--content-type ogl-rw-task-list-item--content-type" style="width: 60px;">
+                                                                                    <redwood-badge ><span class="rw-badge">Process</span></redwood-badge>
+                                                                                </div>
+                                                                                <button class="ac-item--title ogl-rw-task-list-item--title"><span class="ac-item--title--text ogl-rw-task-list-item--title--text" >Hiring Process</span></button>
+                                                                                <div class="ac-item--status ogl-rw-task-list-item--status rw-icon rw-ux-ico-checkbox-off" style="font-size: 20px;" ></div>
+                                                                                <button aria-haspopup="true" title="Steps" class="ac-item--step-menu ogl-rw-task-list-item--step-menu" aria-label="Launch step guide menu for pt_demo_pg_98114123">    
+                                                                                    <redwood-icon role="presentation" class="rw-icon rw-ux-ico-overflow-v"></redwood-icon>
+                                                                                </button>
+                                                                            </redwood-list-item>
+                                                                        </activity-center-item>
+                                                                    </div>
+                                                                    <div><button aria-label="Reset Task List Progress" class="ogl-rw-task-list--reset">Reset Task List</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>                             
+                                                        </task-list-details-v2>
+                                                    </div>
+                                                </div>
+                                            </help-widget-task-list-item>
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                </app-content-list>
+        
+                            <h2 class="ogl-rw-help-widget--content-group--title ogl-icon--reference-name">
+                                 Getting Started
+                            </h2>
+                                <app-content-list>
+                                    <ul>
+                                        <li class="ogl-rw-help-widget--content-group--row">
+                                            <help-widget-content-item>
+                                                <redwood-list-item class="rw-list-item" title="Beacon">
+                                                    <button rwtext="" class="ogl-rw-help-widget-item--title">Interview Process</button>
+                                                    <button aria-haspopup="true" title="Steps" class="ogl-rw-help-widget-item--step-menu" aria-label="Launch step guide menu for Beacon">
+                                                        <redwood-icon role="presentation" class="rw-icon rw-ux-ico-overflow-h"></redwood-icon>
+                                                    </button>
+                                                </redwood-list-item>
+                                            </help-widget-content-item>
+                                        </li>
+                                        <li class="ogl-rw-help-widget--content-group--row">
+                                            <help-widget-content-item>
+                                                <redwood-list-item class="rw-list-item" title="Beacon">
+                                                    <button rwtext="" class="ogl-rw-help-widget-item--title">Referral Program</button>
+                                                    <button aria-haspopup="true" title="Steps" class="ogl-rw-help-widget-item--step-menu" aria-label="Launch step guide menu for Beacon">
+                                                        <redwood-icon role="presentation" class="rw-icon rw-ux-ico-overflow-h"></redwood-icon>
+                                                    </button>
+                                                </redwood-list-item>
+                                            </help-widget-content-item>
+                                        </li>
+                                        
+                                        
+                                        
+                                    </ul>
+                                </app-content-list>
+                        </section>
+                        
+                    </div>
+                    <div class="ogl-rw-help-widget--border"></div>
+                        <help-widget-footer>
+                            <div class="ogl-rw-help-widget-footer">
+                                <div class="ogl-rw-help-widget-footer--items">
+                                    <div class="ogl-rw-help-widget-footer--items--item">
+                                        <a rel="noopener noreferrer" tabindex="0" class="ogl-rw-help-widget-footer--items--item--text" href="undefined" target="_blank"></a>
+                                    </div>
+                                    <div class="ogl-rw-help-widget-footer--items--item">
+                                        <a rel="noopener noreferrer" tabindex="0" class="ogl-rw-help-widget-footer--items--item--text" href="undefined" target="_blank"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </help-widget-footer>
+                </section>
+            </div>
+
+            <div class="ogl-rw-task-list--autoload--iframe ou-task-list__autoload" style="position:absolute; top:2000px;left:800px; transform: translateX(-50%); bottom: unset;">
+                <task-list>
+                    <autoload-task-list-details-v2>
+                        <activity-center>
+                            <div class="ac-container ogl-rw-task-list" style="border-radius: 6px 6px 6px 6px;position:unset;">
+                                <activity-center-header>
+                                    <div class="ac-header-container ogl-rw-task-list--header" style="border-radius: 6px 6px 0px 0px">
+                                        <div class="ac-header-left-container">
+                                            <redwood-icon icon="rw-ux-ico-drag-handle" class="rw-icon rw-ux-ico-drag-handle ac-header-drag-icon"></redwood-icon>
+                                            <div class="ac-header-details">
+                                                <div class="ac-header-title ogl-rw-task-list--title"> Task List title </div>
+                                                <redwood-badge size="small"><span class="rw-badge-sm">1/2</span></redwood-badge>
+                                            </div>
+                                        </div>
+                                        <div class="ac-header-right-container">
+                                            <button class="rw-btn--borderless" aria-label="Minimize Task List">
+                                                <redwood-icon  icon="rw-ux-ico-minimize" class="rw-icon rw-btn--icon-size ac-header-minimize-btn ogl-rw-task-list--header--toggle rw-ux-ico-minimize"></redwood-icon>
+                                            </button>
+                                            <button class="rw-btn--borderless" aria-label="Close Task List">
+                                                <redwood-icon class="rw-icon rw-btn--icon-size rw-ux-ico-close" aria-label="Close Task List"></redwood-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </activity-center-header>
+                                <div class="ac-content">
+                                    <div class="ogl-rw-task-list--details" style="visibility: visible;">
+                                        <span class="ogl-rw-task-list--desc">This is task list description</span>
+                                        <div class="ogl-rw-task-list--details--wrapper">
+                                            <activity-center-item>
+                                                <redwood-list-item class="rw-list-item ac-item ogl-rw-task-list-item" title="Lorem ipsum dolor amet">
+                                                    <div class="ac-item--content-type ogl-rw-task-list-item--content-type" style="width: 60px;">
+                                                        <redwood-badge ><span class="rw-badge" >Process</span></redwood-badge>
+                                                    </div>
+                                                    <button class="ac-item--title ogl-rw-task-list-item--title"><span class="ac-item--title--text ogl-rw-task-list-item--title--text" >Lorem ipsum dolor amet</span></button>
+                                                    <div class="ac-item--status ogl-rw-task-list-item--status rw-icon rw-ux-ico-checkbox-on" style="font-size: 20px;" ></div>
+                                                    <button aria-haspopup="true" title="Steps" class="ac-item--step-menu ogl-rw-task-list-item--step-menu" aria-label="Launch step guide menu for pt_demo_pg_98114123">    
+                                                        <redwood-icon role="presentation" class="rw-icon rw-ux-ico-overflow-v"></redwood-icon>
+                                                    </button>
+                                                </redwood-list-item>
+                                            </activity-center-item>
+                                            <activity-center-item>
+                                                <redwood-list-item class="rw-list-item ac-item ogl-rw-task-list-item" title="Lorem ipsum dolor amet">
+                                                    <div class="ac-item--content-type ogl-rw-task-list-item--content-type" style="width: 60px;">
+                                                        <redwood-badge ><span class="rw-badge">Process</span></redwood-badge>
+                                                    </div>
+                                                    <button class="ac-item--title ogl-rw-task-list-item--title"><span class="ac-item--title--text ogl-rw-task-list-item--title--text" >Lorem ipsum dolor amet</span></button>
+                                                    <div class="ac-item--status ogl-rw-task-list-item--status rw-icon rw-ux-ico-checkbox-off" style="font-size: 20px;" ></div>
+                                                    <button aria-haspopup="true" title="Steps" class="ac-item--step-menu ogl-rw-task-list-item--step-menu" aria-label="Launch step guide menu for pt_demo_pg_98114123">    
+                                                        <redwood-icon role="presentation" class="rw-icon rw-ux-ico-overflow-v"></redwood-icon>
+                                                    </button>
+                                                </redwood-list-item>
+                                            </activity-center-item>
+                                        </div>
+                                    </div>
+                                </div>
+                                <activity-center-footer>
+                                    <div class="ac-footer ogl-rw-task-list--footer" style="position:unset;width:unset;height:unset;">
+                                        <button type="button" title="Reset" aria-label="Reset" class="ac-footer-btn ogl-rw-task-list--footer--reset-btn" style="width: 100%; height: 36px;">
+                                            <span>Reset</span>
+                                        </button>
+                                    </div>
+                                </activity-center-footer>
+                            </div>
+                        </activity-center>
+                    </autoload-task-list-details-v2>
+                </task-list>
+            </div>
+            
+            <div class="ogl-rw-task-list--autoload--iframe" style="position:absolute; top:2000px;left:1200px; transform: translateX(-50%); bottom: unset;">
+                <task-list>
+                    <autoload-task-list-details-v2>
+                        <activity-center>
+                            <div class="ac-container ogl-rw-task-list" style="border-radius: 6px 6px 6px 6px;position:unset;">
+                                <activity-center-header>
+                                    <div class="ac-header-container ogl-rw-task-list--header" style="border-radius: 6px">
+                                        <div class="ac-header-left-container">
+                                            <redwood-icon icon="rw-ux-ico-drag-handle" class="rw-icon rw-ux-ico-drag-handle ac-header-drag-icon"></redwood-icon>
+                                            <div class="ac-header-details">
+                                                <div class="ac-header-title ogl-rw-task-list--title"> Task List title </div>
+                                                <redwood-badge size="small"><span class="rw-badge-sm">1/2</span></redwood-badge>
+                                            </div>
+                                        </div>
+                                        <div class="ac-header-right-container">
+                                            <button class="rw-btn--borderless" aria-label="Maximize Task List">
+                                                <redwood-icon  icon="rw-ux-ico-minimize" class="rw-icon rw-btn--icon-size ac-header-minimize-btn ogl-rw-task-list--header--toggle rw-ux-ico-minimize "></redwood-icon>
+                                            </button>
+                                            <button class="rw-btn--borderless" aria-label="Close Task List">
+                                                <redwood-icon class="rw-icon rw-btn--icon-size rw-ux-ico-close" aria-label="Close Task List"></redwood-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </activity-center-header>
+                            </div>
+                        </activity-center>
+                    </autoload-task-list-details-v2>
+                </task-list>
+            </div>
+
+              
+            <div class="ogl-rw-feedback ogl-rw-feedback--center" style="position: absolute; top: 2000px; left: 300px; transform: translateX(-50%);">
+                <div class="ogl-rw-feedback--main">
+                   <h1 class="ogl-rw-feedback--title">Rate this guide:</h1>
+                   <span aria-label="Rate your experience" class="ogl-rw-feedback--subtitle">Rate your experience </span>
+                   <div class="ogl-rw-feedback--rating">
+                    <input aria-label="Choose your rating out of bad, average and good. Use arrow key and space key to select rating" id="rating0" checked="1" type="radio" name="rating" value="0" role="none">
+                    <input id="feedback-rating1" aria-label="bad rating" type="radio" name="feedback-rating" value="1">
+                    <label for="feedback-rating1" aria-hidden="true" class="ogl-rw-feedback--rating-bad"></label>
+                    <input aria-label="average rating" id="feedback-rating3" type="radio" name="feedback-rating" value="3">
+                    <label for="feedback-rating3" aria-hidden="true" class="ogl-rw-feedback--rating-avg"></label>
+                    <input aria-label="good rating" id="feedback-rating5" type="radio" name="feedback-rating" value="5" checked>
+                    <label for="feedback-rating5" aria-hidden="true" class="ogl-rw-feedback--rating-good"></label>
+                </div>
+                <div class="ogl-rw-feedback--rating-text"><span class="">Bad</span><span class="">Average</span><span class="">Good</span></div>
+                   <span aria-label="Tell us what was least/most helpful about this guide? This is optional" class="ogl-rw-feedback--subtitle">Tell us what was least/most helpful about this guide? </span>
+                   <div class="ogl-rw-feedback--text-area-container"><textarea class="ogl-rw-feedback--text-area" id="user_answer" rows="3" maxlength="1000" aria-label="Write your feedback here and this is optional. Your input helps us improve your experience" placeholder="Tell us more. We are listening..."></textarea></div>
+                </div>
+                <div class="ogl-rw-feedback--footer">
+                    <button id="skip" aria-label="No Thanks " role="button" data-iridize-role="nextBt" class="ogl-rw-feedback--no-outline-btn">No Thanks</button>
+                    <button id="submit-feedback" aria-label="Submit feedback " role="button" data-iridize-role="nextBt" class="ogl-rw-feedback--fill-btn" disabled="">Submit Feedback</button>
+                </div>
+             </div>
+
+             <div class="ogl-rw-convergence-launcher" style="position:absolute; top:1200px;left:150px">
+                <div class="ogl-rw-launcher-container">
+                    <aside class="ogl-rw-widget">
+                        <div class="ogl-rw-widget--launch">
+                            <span id="launchConvIconLoader" class="fa fa-spinner fa-spin ogl-rw-widget--launch-loader" style="display: none;"></span>
+                            <a href="JavaScript:void(0);" id="launchConv" title="Help Center" aria-label="HELP CENTER" style="display: inline;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 132" class="ogl-rw-widget--launch-icon" id="launchConvIcon">
+                                    <g id="Layer_2">
+                                      <g id="Layer_1-2">
+                                        <path id="info-8" d="M66,11A55,55,0,1,1,11,66,55.06,55.06,0,0,1,66,11ZM66,0a66,66,0,1,0,66,66A66,66,0,0,0,66,0ZM54.82,88.06c3.1-9.84,9-21.63,10-24.61,1.51-4.33-1.16-6.25-9.57,1.15-.54-1.09-1.29-2.33-1.86-3.52C63,50.64,82.74,48.29,76,64.45c-4.2,10.1-7.2,16.91-8.92,22.16-2.5,7.67,3.82,4.56,10-1.16.85,1.38,1.12,1.82,2,3.41C65.32,101.93,50.07,103.09,54.82,88.06ZM80.9,43.13C78,45.61,73.64,45.56,71.21,43s-2-6.64.91-9.13,7.25-2.43,9.68.12S83.82,40.64,80.9,43.13Z"></path>
+                                      </g>
+                                    </g>
+                                  </svg>
+                            </a>
+                        </div>
+                        <div class="ogl-rw-widget--move" aria-label="Move">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.94 110.98" id="ogl-launcher-drag" class="ogl-rw-widget--move-icon">
+                                <g id="Layer_2">
+                                  <g id="Layer_1-2">
+                                    <g>
+                                      <circle cx="14.26" cy="13.63" r="13.63"></circle>
+                                      <circle cx="53.24" cy="13.63" r="13.63"></circle>
+                                      <circle cx="92.22" cy="13.63" r="13.63"></circle>
+                                      <circle cx="13.63" cy="54.41" r="13.63"></circle>
+                                      <circle cx="52.61" cy="54.41" r="13.63"></circle>
+                                      <circle cx="91.59" cy="54.41" r="13.63"></circle>
+                                      <circle cx="15.34" cy="97.35" r="13.63"></circle>
+                                      <circle cx="54.32" cy="97.35" r="13.63"></circle>
+                                      <circle cx="93.3" cy="97.35" r="13.63"></circle>
+                                    </g>
+                                  </g>
+                                </g>
+                              </svg>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div id="wrap" class="ogl-rw-step-guide-body" style="position:absolute; top:1050px;left:1100px; transform: translateX(-50%); width:710px; border-radius: 6px">
+                <ogl-redwood-guide-previewer-directive>
+                    <div class="ogl-rw-step-guide">
+                        <div class="ogl-rw-step-guide--header">
+                        <div class="ogl-rw-step-guide--header--container">
+                            <div class="ogl-rw-step-guide--header--toggle">
+                                <div class="ogl-rw-step-guide--header--form-group" style="margin-left: 20px;">
+                                    <input type="checkbox" id="ogl-rw-step-guide-screenshot">
+                                    <label for="ogl-rw-step-guide-screenshot">Show Screenshots</label>
+                                </div>
+                            </div>
+                            <button id="ogl-rw-step-guide--unpin-btn" title="Unpin" aria-label="unpin step guide">
+                                <svg class="ogl-rw-step-guide--unpin-img" viewBox="0 0 20 20">
+                                <path d="M0.999996 19L19 19L19 1L0.999998 0.999998L0.999996 19ZM0.999996 19L12 8M12 8L12 15M12 8L5 8" stroke="#161513" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="ogl-rw-step-guide--separator" style="margin: -1px 25px 0px 25px;"></span>
+                        <span class="ogl-rw-step-guide--title" id="stepHeaderTitle" aria-label="Step guide for Guide 1">Test guide</span>
+                        </div>
+                        <div class="ogl-rw-step-guide--steps" style="margin-top: 133.8px;">
+                        <div ng-repeat="step in steps" ng-if="step.id !== 'eol0'" class="ogl-rw-step-guide--steps--content">
+                            <span class="ogl-rw-step-guide--separator"></span>
+                            <ogl-redwood-step-previewer-directive class="ogl-rw-step-guide--steps--list" index="$index" step="step">
+                                <span class="ogl-rw-step-guide--step--title">Step 1</span>
+                                <div class="ogl-step-guide--step--caption">
+                                    <div class="ogl-rw-step-guide--video--content">
+                                        <img src="https://guidedlearning.oracle.com/static/tipcms/img/step-guide-iframe.png"/>
+                                    </div>
+                                    <p>welcome to OGL</p>
+                                </div>
+                            </ogl-redwood-step-previewer-directive>
+                        </div>
+                        <div class="ogl-rw-step-guide--steps--content">
+                            <span class="ogl-rw-step-guide--separator"></span>
+                            <ogl-redwood-step-previewer-directive class="ogl-rw-step-guide--steps--list"  index="$index" step="step">
+                                <span class="ogl-rw-step-guide--step--title">Step 2</span>
+                                <div class="ogl-step-guide--step--caption">Click Google Search</div>
+                            </ogl-redwood-step-previewer-directive>
+                        </div>
+                        <span class="ogl-rw-step-guide--separator"></span> 
+                        </div>
+                    </div>
+                    <div class="ogl-rw-step-guide--footer">
+                        <div class="ogl-rw-step-guide--footer--export">
+                            <div class="ogl-rw-step-guide--footer--export--form-group">
+                                <input type="checkbox" id="ogl-rw-step-guide-video" checked>
+                                <label for="ogl-rw-step-guide-video">Print Invisible Steps</label>
+                            </div>
+                        <button aria-label="Print step guide" title="Print">
+                            <svg class="ogl-rw-step-guide--footer--export--print-img" viewBox="0 0 20 20">
+                            <path d="M5 11V10H4V11H5ZM15 11H16V10H15V11ZM15 19V20H16V19H15ZM5 19H4V20H5V19ZM5 1V0H4V1H5ZM15 1H16V0H15V1ZM15 7V8H16V7H15ZM5 7H4V8H5V7ZM19 15V16H20V15H19ZM19 7H20V6H19V7ZM1 7V6H0V7H1ZM1 15H0V16H1V15ZM5 12H15V10H5V12ZM14 11V19H16V11H14ZM15 18H5V20H15V18ZM6 19V11H4V19H6ZM5 2H15V0H5V2ZM14 1V7H16V1H14ZM15 6H5V8H15V6ZM6 7V1H4V7H6ZM15 16H19V14H15V16ZM20 15V7H18V15H20ZM19 6H1V8H19V6ZM0 7V15H2V7H0ZM1 16H5V14H1V16Z"/>
+                            </svg>
+                        </button>
+                        <button aria-label="Send step guide as email" title="Email">
+                            <svg class="ogl-rw-step-guide--footer--export--email-img" viewBox="0 0 20 20">
+                            <path d="M1 1L10 9L19 1M1 1H19M1 1V17H19V1" stroke="#161513" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        </div>
+                        <button aria-label="close step guide" title="Close step guide" class="ogl-rw-step-guide--footer--exit-btn">Exit</button>
+                    </div>
+                </ogl-redwood-guide-previewer-directive>
+            </div>
+        </article>
+    </section>
+</body>
+<script>
+
+    document.addEventListener("click", function(event) {
+        if (event.target && event.target.id === "tooltipRemindMeLater__btn") {
+            const remindMebutton = event.target;
+            const container = remindMebutton.closest(".later-btn--container");
+            if (container) {
+                const dropdown = container.querySelector(".later-btn--dropdown");
+                const dropdownClasses = dropdown.classList;
+                if (dropdownClasses.contains("show-later-btn-dropdown")) {
+                    dropdown.classList.remove("show-later-btn-dropdown");
+                } else {
+                    dropdown.classList.add("show-later-btn-dropdown");
+                }
+            }
+        }
+    });
+
+    /* Tab bottom color switching */
+    document.querySelectorAll('.ogl-kit-navigation-btn').forEach(item => {
+        item.addEventListener('click', event => {
+            document.querySelectorAll('.ogl-kit-navigation-btn').forEach(item => {
+                item.classList.remove("ogl-kit-navigation-active");
+            })
+            item.classList.add('ogl-kit-navigation-active');
+            
+            if(item.innerHTML.includes('Legacy')){
+                // hide redwood section
+                document.querySelector("#ogl-rw-kit-container").style.display = "none";
+                document.querySelector("#ogl-legacy-kit-container").style.display = "block";
+            }else{
+                document.querySelector("#ogl-legacy-kit-container").style.display = "none";
+                document.querySelector("#ogl-rw-kit-container").style.display = "block";
+            }
+        })
+    })
+
+</script>
+</html>
