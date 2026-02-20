@@ -15,7 +15,7 @@ const users = {
   "poorvika.h.u@oracle.com": "Welcome@123",
   "greeshma.a@oracle.com": "Welcome@123",
   "jaishankar.kumar@oracle.com": "Welcome@123",
-  "soumya.s.soumya@oracle.com": "Welcome@123"
+  "soumya.s.soumya@oracle.com": "Welcome@123",
 };
 // Add new users manually here
 
