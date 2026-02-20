@@ -5,7 +5,17 @@ const users = {
   "aathish.r@oracle.com": "Welcome@123",
   "mubashreen.kousar@oracle.com": "Welcome@123",
   "mohammed.ibrahim.s.shariff@oracle.com": "Welcome@123"
-
+  "priya.gk@oracle.com": "Welcome@123"
+  "shreya.kamplikar@oracle.com": "Welcome@123"
+  "mohan.raj.d@oracle.com": "Welcome@123"
+  "mubashreen.kousar@oracle.com": "Welcome@123"
+  "nagashirisha.maddukuri@oracle.com": "Welcome@123"
+  "srinivasan.anna.venkataramana@oracle.com": "Welcome@123"
+  "rajath.khoday.rajesh@oracle.com": "Welcome@123"
+  "poorvika.h.u@oracle.com": "Welcome@123"
+  "greeshma.a@oracle.com": "Welcome@123"
+  "jaishankar.kumar@oracle.com": "Welcome@123"
+  "soumya.s.soumya@oracle.com": "Welcome@123"
 };
 // Add new users manually here
 
